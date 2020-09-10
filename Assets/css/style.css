@@ -1,0 +1,74 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.3fr 0.6fr 2.2fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "site-title site-title site-title site-title site-title site-title"
+      "search-city current-city\ weather current-city\ weather current-city\ weather current-city\ weather current-city\ weather"
+      "cities five-day\ forecast five-day\ forecast five-day\ forecast five-day\ forecast five-day\ forecast";
+  }
+  
+  .site-title {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      ".";
+    grid-area: site-title;
+  }
+  
+  .cities {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "Austin"
+      "Chicago"
+      "New-York"
+      "Orlando"
+      "San-Francisco"
+      "Seattle"
+      "Atlanta";
+    grid-area: cities;
+  }
+  
+  .Austin { grid-area: Austin; }
+  
+  .Chicago { grid-area: Chicago; }
+  
+  .New-York { grid-area: New-York; }
+  
+  .Orlando { grid-area: Orlando; }
+  
+  .San-Francisco { grid-area: San-Francisco; }
+  
+  .Seattle { grid-area: Seattle; }
+  
+  .Atlanta { grid-area: Atlanta; }
+  
+  .search-city { grid-area: search-city; }
+  
+  .current-city\ weather { grid-area: current-city\ weather; }
+  
+  .five-day\ forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas:
+      "first-day second-day third-day fourth-day fifth-day";
+    grid-area: five-day\ forecast;
+  }
+  
+  .first-day { grid-area: first-day; }
+  
+  .second-day { grid-area: second-day; }
+  
+  .third-day { grid-area: third-day; }
+  
+  .fourth-day { grid-area: fourth-day; }
+  
+  .fifth-day { grid-area: fifth-day; }
