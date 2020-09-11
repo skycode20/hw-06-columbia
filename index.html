@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="Assets\css\style.css"/>
 
     
-    <title>The Weather Dashboard</title>
+    <title>The Weather-Tron 2000</title>
 
 </head>
 
@@ -23,7 +23,15 @@
 
     <div id ="grid-container">
 
-        <div id ="site-title"></div>
+        <header id ="site-title" class="jumbotron">
+            <h1>The Weather-Tron 2000</h1>
+        </header>
+        
+        <div id ="search-city">
+            <p>Search By City:</p>
+            <textarea id = "user-search-input"></textarea>
+            <button id="search-button"></button>
+        </div>
 
         <div id ="list-cities">
             <button class = "city" id="dallas">Dallas</button>
@@ -35,10 +43,8 @@
             <button class = "city" id="atlanta">Atlanta</button>
         </div>
 
-        <div id ="search-city">
 
 
-        </div>
 
         <div id ="current-city-weather"></div>
 

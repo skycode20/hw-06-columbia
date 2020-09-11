@@ -17,6 +17,7 @@
     grid-template-areas:
     ".";
     grid-area: site-title;
+    text-align: center;
 }
 
 #list-cities {
