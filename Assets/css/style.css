@@ -1,4 +1,4 @@
-.grid-container {
+#grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 0.3fr 0.6fr 2.2fr;
@@ -6,10 +6,10 @@
     grid-template-areas:
         "site-title site-title site-title site-title site-title site-title"
         "search-city current-city-weather current-city-weather current-city-weather current-city-weather current-city-weather"
-        "cities five-day-forecast five-day-forecast five-day-forecast five-day-forecast five-day-forecast";
+        "list-cities five-day-forecast five-day-forecast five-day-forecast five-day-forecast five-day-forecast";
 }
 
-.site-title {
+#site-title {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
@@ -19,7 +19,7 @@
     grid-area: site-title;
 }
 
-.cities {
+#list-cities {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -32,28 +32,28 @@
         "san-francisco"
         "seattle"
         "atlanta";
-    grid-area: cities;
+    grid-area: list-cities;
 }
 
-.dallas { grid-area: dallas; }
+#dallas { grid-area: dallas; }
 
-.chicago { grid-area: chicago; }
+#chicago { grid-area: chicago; }
 
-.new-york { grid-area: new-york; }
+#new-york { grid-area: new-york; }
 
-.miami { grid-area: miami; }
+#miami { grid-area: miami; }
 
-.san-francisco { grid-area: san-francisco; }
+#san-francisco { grid-area: san-francisco; }
 
-.seattle { grid-area: seattle; }
+#seattle { grid-area: seattle; }
 
-.atlanta { grid-area: atlanta; }
+#atlanta { grid-area: atlanta; }
 
-.search-city { grid-area: search-city; }
+#search-city { grid-area: search-city; }
 
-.current-city-weather { grid-area: current-city-weather; }
+#current-city-weather { grid-area: current-city-weather; }
 
-.five-day-forecast {
+#five-day-forecast {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -63,12 +63,12 @@
     grid-area: five-day-forecast;
 }
 
-.first-day { grid-area: first-day; }
+#first-day { grid-area: first-day; }
 
-.second-day { grid-area: second-day; }
+#second-day { grid-area: second-day; }
 
-.third-day { grid-area: third-day; }
+#third-day { grid-area: third-day; }
 
-.fourth-day { grid-area: fourth-day; }
+#fourth-day { grid-area: fourth-day; }
 
-.fifth-day { grid-area: fifth-day; }
+#fifth-day { grid-area: fifth-day; }
