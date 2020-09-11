@@ -52,7 +52,14 @@
 
 #search-city { grid-area: search-city; }
 
-#current-city-weather { grid-area: current-city-weather; }
+#current-city-weather { 
+    margin: auto;
+    grid-area: current-city-weather; }
+
+.weather-info {
+    text-align: left;
+    
+}
 
 #five-day-forecast {
     display: grid;

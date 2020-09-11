@@ -23,30 +23,76 @@
 
     <div id ="grid-container">
 
+        <!-- Site Header -->
         <header id ="site-title" class="jumbotron">
             <h1>The Weather-Tron 2000</h1>
         </header>
         
-        <div id ="search-city">
+        <!-- City Search Bar -->
+        <aside id ="search-city">
             <p>Search By City:</p>
-            <textarea id = "user-search-input"></textarea>
-            <button id="search-button"></button>
-        </div>
 
-        <div id ="list-cities">
+            <div class="input-group mb-3">
+                
+                <input type="text" id="user-search-input" class="form-control" placeholder="" aria-label="Search City Weather" aria-describedby="basic-addon2">
+
+                <div class="input-group-append">
+                    <button id = "search-button" class="btn btn-outline-secondary" type="button">Search</button>
+                </div>
+
+            </div>
+            
+        </aside>
+
+        <!-- City Buttons -->
+        <aside id ="list-cities">
+            <!-- Dallas Button -->
             <button class = "city" id="dallas">Dallas</button>
+
+            <!-- Chicago Button -->
             <button class = "city" id="chicago">Chicago</button>
+
+            <!-- New York Button -->
             <button class = "city" id="new-york">New York</button>
+
+            <!-- Miami Button -->
             <button class = "city" id="miami">Miami</button>
+
+            <!-- San Francisco Button -->
             <button class = "city" id="san-francisco">San Francisco</button>
+
+            <!-- Seattle Button -->
             <button class = "city" id="seattle">Seattle</button>
+
+            <!-- Atlanta Button -->
             <button class = "city" id="atlanta">Atlanta</button>
+
+        </aside>
+
+
+
+
+        <div id ="current-city-weather">
+
+            <div id="display-city"></div>
+
+            <div class="weather-info">Temperature:
+                <div id="display-temp"></div>
+            </div>
+
+            <div class="weather-info">Humidity:
+                <div id="display-humidity"></div>
+            </div>
+
+            <div class="weather-info">Wind Speed:
+                <div id="display-wind-speed"></div>
+            </div>
+
+            <div class="weather-info">UV Index:
+                <div id="display-uv-index"></div>
+            </div>
+
         </div>
-
-
-
-
-        <div id ="current-city-weather"></div>
 
         <div id="five-day-forecast">
             <div id ="first-day"></div>
