@@ -21,90 +21,228 @@
 
 <body>
 
-    <div id ="grid-container">
+<!-- Main Body Content -->
+<main class="container">
+    <div class="row">
+        <div class="col-lg-12">
 
-        <!-- Site Header -->
-        <header id ="site-title" class="jumbotron">
-            <h1>The Weather-Tron 2000</h1>
-        </header>
-        
+        <div class="card">
+            <header id = "site-title" class="card-body jumbotron">
+            <h1>Weather-Tron 2000</h1> 
+            </header>
+        </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+
         <!-- City Search Bar -->
-        <aside id ="search-city">
+        <aside id ="search-city" class="col-lg-3">
             <p>Search By City:</p>
 
-            <div class="input-group mb-3">
-                
-                <input type="text" id="user-search-input" class="form-control" placeholder="" aria-label="Search City Weather" aria-describedby="basic-addon2">
+                <form class="input-group mb-3">
+                    
+                    <input type="text" id="user-search-input" class="form-control" placeholder="" aria-label="Search City Weather" aria-describedby="basic-addon2">
 
-                <div class="input-group-append">
-                    <button id = "search-button" class="btn btn-outline-secondary" type="button">Search</button>
+                    <div class="input-group-append">
+                        <button id = "search-button" class="btn btn-outline-secondary" type="button">Search</button>
+                    </div>
+
+                </form>
+
+        </aside>
+
+        <!-- Current City Forecast Container -->
+        <div class="col-lg-9">
+
+            <div id ="current-city-weather" class="container">
+
+                <!-- Display Current City Name -->
+                <div id="display-city"></div>
+
+                <!-- Temperature -->
+                <div class="weather-info">Temperature:
+                    <div id="display-temp"></div>
+                </div>
+
+                <!-- Humidity -->
+                <div class="weather-info">Humidity:
+                    <div id="display-humidity"></div>
+                </div>
+
+                <!-- Wind Speed -->
+                <div class="weather-info">Wind Speed:
+                    <div id="display-wind-speed"></div>
+                </div>
+
+                <!-- UV Index -->
+                <div class="weather-info">UV Index:
+                    <div id="display-uv-index"></div>
                 </div>
 
             </div>
-            
-        </aside>
-
-        <!-- City Buttons -->
-        <aside id ="list-cities">
-            <!-- Dallas Button -->
-            <button class = "city" id="dallas">Dallas</button>
-
-            <!-- Chicago Button -->
-            <button class = "city" id="chicago">Chicago</button>
-
-            <!-- New York Button -->
-            <button class = "city" id="new-york">New York</button>
-
-            <!-- Miami Button -->
-            <button class = "city" id="miami">Miami</button>
-
-            <!-- San Francisco Button -->
-            <button class = "city" id="san-francisco">San Francisco</button>
-
-            <!-- Seattle Button -->
-            <button class = "city" id="seattle">Seattle</button>
-
-            <!-- Atlanta Button -->
-            <button class = "city" id="atlanta">Atlanta</button>
-
-        </aside>
-
-
-
-
-        <div id ="current-city-weather">
-
-            <div id="display-city"></div>
-
-            <div class="weather-info">Temperature:
-                <div id="display-temp"></div>
-            </div>
-
-            <div class="weather-info">Humidity:
-                <div id="display-humidity"></div>
-            </div>
-
-            <div class="weather-info">Wind Speed:
-                <div id="display-wind-speed"></div>
-            </div>
-
-            <div class="weather-info">UV Index:
-                <div id="display-uv-index"></div>
-            </div>
-
         </div>
-
-        <div id="five-day-forecast">
-            <div id ="first-day"></div>
-            <div id ="second-day"></div>
-            <div id ="third-day"></div>
-            <div id ="fourth-day"></div>
-            <div id ="fifth-day"></div>
-        </div>
-
     </div>
-    
+
+    <br>
+
+    <!-- Aside List of Cities -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group">
+
+                <!-- Dallas Button -->
+                <button type="button" id="dallas" class="city list-group-item list-group-item-action">Dallas</button>
+
+                <!-- Chicago Button -->
+                <button type="button" id="chicago" class="city list-group-item list-group-item-action">Chicago</button>
+
+                <!-- New York Button -->
+                <button type="button" id="new-york" class="city list-group-item list-group-item-action">New York</button>
+
+                <!-- Miami Button -->
+                <button type="button" id="miami" class="city list-group-item list-group-item-action">Miami</button>
+
+                <!-- San Francisco Button -->
+                <button type="button" id="san-francisco" class="city list-group-item list-group-item-action">San Francisco</button>
+                
+                <!-- Seattle Button -->
+                <button type="button" id="seattle" class="city list-group-item list-group-item-action">Seattle</button>
+                
+                <!-- Atlanta Button -->
+                <button type="button" id="atlanta" class="city list-group-item list-group-item-action">Atlanta</button>
+                
+
+            </div>
+        </div>
+
+        <!-- Weather Forecast Container -->
+        <div class="col-lg-9">
+            <div class="col-lg-12">
+                <!-- The content in this div gets wrapped in a card -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="text-justify">
+
+                        <!-- 5 Day Weather Forecast  -->
+                        <h2>5 Day Forecast:</h2>
+
+                        <div id="five-day-forecast" class="row">
+
+                            <!-- Day One Forecast -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Date</h5>
+                                        <p class="card-text">Temp</p>
+                                        <div class="card-text">Humidity</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day Two Forecast -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Date</h5>
+                                        <p class="card-text">Temp</p>
+                                        <div class="card-text">Humidity</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day Three Forecast -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Date</h5>
+                                        <p class="card-text">Temp</p>
+                                        <div class="card-text">Humidity</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day Four Forecast -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Date</h5>
+                                        <p class="card-text">Temp</p>
+                                        <div class="card-text">Humidity</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Day Five Forecast -->
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <h5 class="card-title">Date</h5>
+                                        <p class="card-text">Temp</p>
+                                        <div class="card-text">Humidity</div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Page Footer -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!-- The content in this div gets wrapped in a card -->
+            <div class="card">
+            <div class="card-body">
+                <div class="text-center">
+                A Rencher Enterprises Application! Copyright 2020
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
     <!-- Links to Script Files -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous">
+    </script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous">
+    </script>
+
+    <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous">
+    </script>
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

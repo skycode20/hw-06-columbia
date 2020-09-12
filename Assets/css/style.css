@@ -61,15 +61,15 @@
     
 }
 
-#five-day-forecast {
-    display: grid;
+/* #five-day-forecast {
+    /* display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 1px 1px;
     grid-template-areas:
         "first-day second-day third-day fourth-day fifth-day";
-    grid-area: five-day-forecast;
-}
+    grid-area: five-day-forecast; */
+/* } */
 
 #first-day { grid-area: first-day; }
 
