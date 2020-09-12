@@ -1,60 +1,36 @@
-#grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.3fr 0.6fr 2.2fr;
-    gap: 1px 1px;
-    grid-template-areas:
-        "site-title site-title site-title site-title site-title site-title"
-        "search-city current-city-weather current-city-weather current-city-weather current-city-weather current-city-weather"
-        "list-cities five-day-forecast five-day-forecast five-day-forecast five-day-forecast five-day-forecast";
-}
+/* #grid-container {
+    
+} */
 
 #site-title {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-    ".";
-    grid-area: site-title;
     text-align: center;
 }
 
-#list-cities {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-        "dallas"
-        "chicago"
-        "new-york"
-        "miami"
-        "san-francisco"
-        "seattle"
-        "atlanta";
-    grid-area: list-cities;
-}
+/* #list-cities {
+    
+} */
 
-#dallas { grid-area: dallas; }
+/* #dallas {  }
 
-#chicago { grid-area: chicago; }
+#chicago {  }
 
-#new-york { grid-area: new-york; }
+#new-york {  }
 
-#miami { grid-area: miami; }
+#miami {  }
 
-#san-francisco { grid-area: san-francisco; }
+#san-francisco {  }
 
-#seattle { grid-area: seattle; }
+#seattle {  }
 
-#atlanta { grid-area: atlanta; }
+#atlanta {  } */
 
-#search-city { grid-area: search-city; }
+/* #search-city { 
 
-#current-city-weather { 
+ } */
+
+/* #current-city-weather { 
     margin: auto;
-    grid-area: current-city-weather; }
+    } */
 
 .weather-info {
     text-align: left;
@@ -62,21 +38,15 @@
 }
 
 /* #five-day-forecast {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    gap: 1px 1px;
-    grid-template-areas:
-        "first-day second-day third-day fourth-day fifth-day";
-    grid-area: five-day-forecast; */
-/* } */
+    
+} */
 
-#first-day { grid-area: first-day; }
+/* #first-day {  } */
 
-#second-day { grid-area: second-day; }
+/* #second-day {  } */
 
-#third-day { grid-area: third-day; }
+/* #third-day {  } */
 
-#fourth-day { grid-area: fourth-day; }
+/* #fourth-day {  } */
 
-#fifth-day { grid-area: fifth-day; }
+/* #fifth-day {  } */
