@@ -44,18 +44,10 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
 
 // Weather API - 5 Day Forecast
-var settingsFiveDay = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?units=I&lang=en&lat=40.7142&lon=-74.0059",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
+var fiveDayCity = "New York, NY";
+var fiveDayURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&city=" + fiveDayCity + apiKey;
 
-$.ajax(settingsFiveDay).done(function (response) {
+$.ajax(fiveDayURL).done(function (response) {
 	console.log(response);
 });
 
