@@ -1,3 +1,5 @@
+$('document').ready(function(){
+
 // Variables Defined
 
 // Reference to the DOM Elements
@@ -216,3 +218,6 @@ $.ajax({
 // //     console.log("Humidity: " + response.main.humidity);
 // //     console.log("Temperature (F): " + tempF);
 //   });
+
+
+});
