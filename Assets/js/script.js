@@ -18,24 +18,30 @@ var sanfranciscoButton = $("san-francisco");
 var seattleButton = $("seattle");
 var atlantaButton = $("atlanta");
 
-// Weather API - Current Weather
-var queryURL = "";
+var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
-var settingsCurrentDay = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&lang=en&lon=-74.0059&lat=40.7142",
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-console.log(settingsCurrentDay);
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+// Weather API - Current Weather ------- Not being used!
+// var queryURL = "";
 
-$.ajax(settingsCurrentDay).done(function (response) {
-	console.log(response);
-});
+// var settingsCurrentDay = {
+    // 	"async": true,
+    // 	"crossDomain": true,
+    // 	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&lang=en&lon=-74.0059&lat=40.7142",
+    // 	"method": "GET",
+    // 	"headers": {
+        // 		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
+        // 		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
+        // 	}
+        // }
+        // console.log(settingsCurrentDay);
+        
+        // $.ajax(settingsCurrentDay).done(function (response) {
+            // 	console.log(response);
+            // });
+            
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
 
 // Weather API - 5 Day Forecast
 var settingsFiveDay = {
@@ -56,160 +62,132 @@ $.ajax(settingsFiveDay).done(function (response) {
 // ======================================================================
 
 // User Searched City 
-var newCity = "Raleigh, NC"
+var userSearchCity = "Raleigh, NC"
+var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ userSearchCity + apiKey;
 
-var userCurrentDay = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + newCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-console.log(userCurrentDay);
-
-$.ajax(userCurrentDay).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: userURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // Dallas Weather Request 
 var dallasCity = "Dallas, TX"
+var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity + apiKey;
 
-var currentWeatherDallas = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + dallasCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherDallas).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: dalURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // Chicago Weather Request 
 var chicagoCity = "Chicago, IL"
+var chiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ chicagoCity + apiKey;
 
-var currentWeatherChicago = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + chicagoCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherChicago).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: chiURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // New York Weather Request 
 var newyorkCity = "New York, NY"
+var nycURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ newyorkCity + apiKey;
 
-var currentWeatherNewYork = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + newyorkCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherNewYork).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: nycURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // Miami Weather Request 
 var miamiCity = "Miami, FL"
+var miaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ miamiCity + apiKey;
 
-var currentWeatherMiami = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + miamiCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
+$.ajax({
+      url: miaURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 
-$.ajax(currentWeatherMiami).done(function (response) {
-	console.log(response);
-});
 // ======================================================================
 
 // Seattle Weather Request 
 var seattleCity = "Seattle, WA"
+var seaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ seattleCity + apiKey;
 
-var currentWeatherSeattle = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + seattleCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherSeattle).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: seaURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // Atlanta Weather Request 
 var atlantaCity = "Atlanta, GA"
+var atlURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ atlantaCity + apiKey;
 
-var currentWeatherAtlanta = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + atlantaCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherAtlanta).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: atlURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 // ======================================================================
 
 // San Francisco Weather Request 
 var sanfranciscoCity = "San Francisco, CA"
+var sanfranURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ sanfranciscoCity + apiKey;
 
-var currentWeatherSanFrancisco = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I&city=" + sanfranciscoCity,
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "weatherbit-v1-mashape.p.rapidapi.com",
-		"x-rapidapi-key": "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab"
-	}
-}
-
-$.ajax(currentWeatherSanFrancisco).done(function (response) {
-	console.log(response);
-});
+$.ajax({
+      url: sanfranURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
 
 
+// Weather Request New API #
+var austinCity = "Austin, TX"
+var apiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ austinCity + apiKey;
 
-// var APIKey = "1158285bedmshcd503baf4df4f38p164fc5jsn041ef8eb90ab";
+$.ajax({
+      url: apiURL,
+      method: "GET"
+    })
+    .then(function(response) {
+        // console.log(apiURL);
+        console.log(response);
+    });
+
+
 
 // // Here we are building the URL we need to query the database
 // var queryURL = "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I" +
