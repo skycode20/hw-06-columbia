@@ -182,6 +182,12 @@ $.ajax({
     });
 
 
+// Adding Click Listener to the Buttons
+
+// Dallas Button
+$(dallasButton).on("click", function(){
+    console.log(this);
+})
 
 // // Here we are building the URL we need to query the database
 // var queryURL = "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I" +
