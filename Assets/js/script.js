@@ -83,6 +83,15 @@ var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity 
         .then(function(response) {
             // console.log(apiURL);
             console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+
+            // $(dallasButton).append();
         });
     });
 
@@ -93,14 +102,28 @@ var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity 
 var chicagoCity = "Chicago, IL"
 var chiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ chicagoCity + apiKey;
 
-$.ajax({
-      url: chiURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(chicagoButton).on("click", function(event) {
+        event.preventDefault();
+
+    $.ajax({
+        url: chiURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            // console.log(apiURL);
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.wind_spd);
+            $(currentHumidity).text("Humidity: " + response.rh);
+            $(currentUvIndex).text("UV Index: " + response.uv);
+        });
     });
+
+    console.log(chicagoButton);
+
 // ======================================================================
 
 // New York Weather Request 
