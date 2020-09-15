@@ -85,7 +85,7 @@ var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity 
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -113,7 +113,7 @@ var chiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ chicagoCity
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -142,7 +142,7 @@ var nycURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ newyorkCity
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -170,7 +170,7 @@ var miaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ miamiCity +
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -199,7 +199,7 @@ var seaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ seattleCity
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -228,7 +228,7 @@ var atlURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ atlantaCity
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
@@ -257,7 +257,7 @@ $(sanfranciscoButton).on("click", function(event) {
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(displayCurrentCity).html("<h1>" + response.data[0].city_name + " Weather Details</h1>");
             $(currentTemp).text("Temperature: " + response.data[0].temp);
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
