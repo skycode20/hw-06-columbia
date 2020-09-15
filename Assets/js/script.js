@@ -12,13 +12,13 @@ var currentHumidity = $("#display-humidity");
 var currentWindSpeed = $("#display-wind-speed");
 var currentUvIndex = $("#display-uv-index");
 
-var dallasButton = $("dallas");
-var chicagoButton = $("chicago");
-var newyorkButton = $("new-york");
-var miamiButton = $("miami");
-var sanfranciscoButton = $("san-francisco");
-var seattleButton = $("seattle");
-var atlantaButton = $("atlanta");
+var dallasButton = $("#dallas");
+var chicagoButton = $("#chicago");
+var newyorkButton = $("#new-york");
+var miamiButton = $("#miami");
+var sanfranciscoButton = $("#san-francisco");
+var seattleButton = $("#seattle");
+var atlantaButton = $("#atlanta");
 
 var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
@@ -73,14 +73,20 @@ $.ajax({
 var dallasCity = "Dallas, TX"
 var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity + apiKey;
 
-$.ajax({
-      url: dalURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(dallasButton).on("click", function(event) {
+        event.preventDefault();
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(function(response) {
+            // console.log(apiURL);
+            console.log(response);
+        });
     });
+
+    console.log(dallasButton);
 // ======================================================================
 
 // Chicago Weather Request 
@@ -181,13 +187,17 @@ $.ajax({
         console.log(response);
     });
 
+    var weather = [""]
 
+    function weatherButton() {
+
+
+    }
 // Adding Click Listener to the Buttons
-
 // Dallas Button
-$(dallasButton).on("click", function(){
-    console.log(this);
-})
+// $(dallasButton).on("click", function(){
+//     console.log(dallasButton);
+// })
 
 // // Here we are building the URL we need to query the database
 // var queryURL = "https://weatherbit-v1-mashape.p.rapidapi.com/current?units=I" +
