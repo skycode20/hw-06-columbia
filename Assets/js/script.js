@@ -81,7 +81,7 @@ var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity 
             method: "GET"
         })
         .then(function(response) {
-            // console.log(apiURL);
+            
             console.log(response);
 
             // transfer to the html
@@ -90,8 +90,7 @@ var dalURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ dallasCity 
             $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
             $(currentHumidity).text("Humidity: " + response.data[0].rh);
             $(currentUvIndex).text("UV Index: " + response.data[0].uv);
-
-            // $(dallasButton).append();
+            
         });
     });
 
@@ -110,15 +109,16 @@ var chiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ chicagoCity
         method: "GET"
         })
         .then(function(response) {
-            // console.log(apiURL);
+            
             console.log(response);
 
             // transfer to the html
-            $(displayCurrentCity).html("<h1> City" + response.city_name + " Weather Details</h1>");
-            $(currentTemp).text("Temperature: " + response.temp);
-            $(currentWindSpeed).text("Wind Speed: " + response.wind_spd);
-            $(currentHumidity).text("Humidity: " + response.rh);
-            $(currentUvIndex).text("UV Index: " + response.uv);
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
         });
     });
 
@@ -130,28 +130,56 @@ var chiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ chicagoCity
 var newyorkCity = "New York, NY"
 var nycURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ newyorkCity + apiKey;
 
-$.ajax({
-      url: nycURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(newyorkButton).on("click", function(event) {
+        event.preventDefault();
+
+    $.ajax({
+        url: nycURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
+        });
     });
+
+    console.log(newyorkButton);
 // ======================================================================
 
 // Miami Weather Request 
 var miamiCity = "Miami, FL"
 var miaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ miamiCity + apiKey;
 
-$.ajax({
-      url: miaURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(miamiButton).on("click", function(event) {
+        event.preventDefault();
+
+    $.ajax({
+        url: miaURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
+        });
     });
+
+    console.log(miamiButton);
 
 // ======================================================================
 
@@ -159,63 +187,96 @@ $.ajax({
 var seattleCity = "Seattle, WA"
 var seaURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ seattleCity + apiKey;
 
-$.ajax({
-      url: seaURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(seattleButton).on("click", function(event) {
+        event.preventDefault();
+
+    $.ajax({
+        url: seaURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
+        });
     });
+
+    console.log(seattleButton);
+
 // ======================================================================
 
 // Atlanta Weather Request 
 var atlantaCity = "Atlanta, GA"
 var atlURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ atlantaCity + apiKey;
 
-$.ajax({
-      url: atlURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+    $(atlantaButton).on("click", function(event) {
+        event.preventDefault();
+
+    $.ajax({
+        url: atlURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
+        });
     });
+
+    console.log(atlantaButton);
+
 // ======================================================================
 
 // San Francisco Weather Request 
 var sanfranciscoCity = "San Francisco, CA"
 var sanfranURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ sanfranciscoCity + apiKey;
 
-$.ajax({
-      url: sanfranURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
+$(sanfranciscoButton).on("click", function(event) {
+    event.preventDefault();
+
+    $.ajax({
+        url: sanfranURL,
+        method: "GET"
+        })
+        .then(function(response) {
+            
+            console.log(response);
+
+            // transfer to the html
+            $(displayCurrentCity).html("<h1> City" + response.data[0].city_name + " Weather Details</h1>");
+            $(currentTemp).text("Temperature: " + response.data[0].temp);
+            $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+            $(currentHumidity).text("Humidity: " + response.data[0].rh);
+            $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+            
+        });
     });
 
+    console.log(sanfranciscoButton);
 
-// Weather Request New API #
-var austinCity = "Austin, TX"
-var apiURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ austinCity + apiKey;
-
-$.ajax({
-      url: apiURL,
-      method: "GET"
-    })
-    .then(function(response) {
-        // console.log(apiURL);
-        console.log(response);
-    });
-
-    var weather = [""]
-
-    function weatherButton() {
+// =======================================================================
 
 
-    }
+    // var weather = [""]
+
+    // function weatherButton() {
+
+
+    // }
 // Adding Click Listener to the Buttons
 // Dallas Button
 // $(dallasButton).on("click", function(){
