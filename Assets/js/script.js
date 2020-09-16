@@ -111,6 +111,7 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     };
 
     // Weather Forecast Functions
+    // Display Forecast Day 1
     function displayForecastDay1(response) {
                 
         console.log(response);
@@ -120,6 +121,62 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
         $(forecastDayOneTemp).text("Temperature: " + response.data[1].temp);
         // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayOneHumidity).text("Humidity: " + response.data[1].rh);
+        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        
+    };
+
+    // Display Forecast Day 2
+    function displayForecastDay2(response) {
+                
+        console.log(response);
+
+        // transfer to the html
+        $(forecastDayTwoDate).html("<h3>" +  " (" + response.data[2].datetime + ")</h3>" );
+        $(forecastDayTwoTemp).text("Temperature: " + response.data[2].temp);
+        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(forecastDayTwoHumidity).text("Humidity: " + response.data[2].rh);
+        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        
+    };
+
+    // Display Forecast Day 3
+    function displayForecastDay3(response) {
+                
+        console.log(response);
+
+        // transfer to the html
+        $(forecastDayThreeDate).html("<h3>" +  " (" + response.data[3].datetime + ")</h3>" );
+        $(forecastDayThreeTemp).text("Temperature: " + response.data[3].temp);
+        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(forecastDayThreeHumidity).text("Humidity: " + response.data[3].rh);
+        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        
+    };
+
+    // Display Forecast Day 4
+    function displayForecastDay4(response) {
+                
+        console.log(response);
+
+        // transfer to the html
+        $(forecastDayFourDate).html("<h3>" +  " (" + response.data[4].datetime + ")</h3>" );
+        $(forecastDayFourTemp).text("Temperature: " + response.data[4].temp);
+        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(forecastDayFourHumidity).text("Humidity: " + response.data[4].rh);
+        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        
+    };
+
+    // Display Forecast Day 5
+    function displayForecastDay5(response) {
+                
+        console.log(response);
+
+        // transfer to the html
+        $(forecastDayFiveDate).html("<h3>" +  " (" + response.data[5].datetime + ")</h3>" );
+        $(forecastDayFiveTemp).text("Temperature: " + response.data[5].temp);
+        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(forecastDayFiveHumidity).text("Humidity: " + response.data[5].rh);
         // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
