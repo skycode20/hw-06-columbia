@@ -201,6 +201,30 @@ var dalURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             method: "GET"
         })
         .then(displayForecastDay1);
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
             
         });
     
@@ -221,6 +245,35 @@ var chiURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: chiURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: chiURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: chiURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: chiURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: chiURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
         });
 
     console.log(chicagoButton);
@@ -240,6 +293,35 @@ var nycURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: nycURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: nycURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: nycURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: nycURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: nycURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);nyc
         });
 
     console.log(newyorkButton);
@@ -258,6 +340,35 @@ var miaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: miaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: miaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: miaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: miaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: miaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
         });
 
     console.log(miamiButton);
@@ -277,6 +388,36 @@ var seaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: seaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: seaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: seaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: seaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: seaURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
+
         });
 
     console.log(seattleButton);
@@ -296,6 +437,35 @@ var atlURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: atlURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: atlURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: atlURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: atlURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: atlURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
         });
 
     console.log(atlantaButton);
@@ -315,6 +485,36 @@ $(sanfranciscoButton).on("click", function(event) {
         })
         .then(showCurrentWeatherInfo);
             
+        $.ajax({
+            url: sanfranURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
+
+        $.ajax({
+            url: sanfranURL,
+            method: "GET"
+        })
+        .then(displayForecastDay2);
+
+        $.ajax({
+            url: sanfranURL,
+            method: "GET"
+        })
+        .then(displayForecastDay3);
+
+        $.ajax({
+            url: sanfranURL,
+            method: "GET"
+        })
+        .then(displayForecastDay4);
+
+        $.ajax({
+            url: sanfranURL,
+            method: "GET"
+        })
+        .then(displayForecastDay5);
+
         });
 
     console.log(sanfranciscoButton);
