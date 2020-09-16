@@ -24,7 +24,10 @@ var seattleButton = $("#seattle");
 var atlantaButton = $("#atlanta");
 
 // 5 Day Forecast Container Variables
-var forecastDayOne = $("#day-one-forecast");
+var forecastDayOneDate = $("#day-one-date");
+var forecastDayOneTemp = $("#day-one-temp");
+var forecastDayOneHumidity = $("#day-one-humidity");
+
 var forecastDayTwo = $("#day-two-forecast");
 var forecastDayThree = $("#day-three-forecast");
 var forecastDayFour = $("#day-four-forecast");
@@ -91,16 +94,16 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     };
 
     // Weather Forecast Functions
-    function showWeatherForecastDay1(response) {
+    function displayForecastDay1(response) {
                 
         console.log(response);
 
         // transfer to the html
-        $(displayCurrentCity).html("<h1>" + response.city_name + " (" + response.data[0].datetime + ") " );
-        $(currentTemp).text("Temperature: " + response.data[0].temp);
-        $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
-        $(currentHumidity).text("Humidity: " + response.data[0].rh);
-        $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        $(forecastDayOneDate).html("<h3>" +  " (" + response.data[1].datetime + ")</h3>" );
+        $(forecastDayOneTemp).text("Temperature: " + response.data[1].temp);
+        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(forecastDayOneHumidity).text("Humidity: " + response.data[1].rh);
+        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
@@ -118,6 +121,12 @@ var dalURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             method: "GET"
         })
         .then(showCurrentWeatherInfo);
+
+        $.ajax({
+            url: dalURL,
+            method: "GET"
+        })
+        .then(displayForecastDay1);
             
         });
     
