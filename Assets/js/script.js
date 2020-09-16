@@ -65,13 +65,27 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 //         console.log(response);
 //     });
 // // ======================================================================
-    // Current Weather Info Functions
+    // Current Weather Info Function
     function showCurrentWeatherInfo(response) {
                 
         console.log(response);
 
         // transfer to the html
-        $(displayCurrentCity).html("<h1>" + response.city_name + " Weather Details</h1>");
+        $(displayCurrentCity).html("<h1>" + response.city_name + " (" + response.data[0].datetime + ") " );
+        $(currentTemp).text("Temperature: " + response.data[0].temp);
+        $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
+        $(currentHumidity).text("Humidity: " + response.data[0].rh);
+        $(currentUvIndex).text("UV Index: " + response.data[0].uv);
+        
+    };
+
+    // Weather Forecast Functions
+    function showWeatherForecastDay1(response) {
+                
+        console.log(response);
+
+        // transfer to the html
+        $(displayCurrentCity).html("<h1>" + response.city_name + " (" + response.data[0].datetime + ") " );
         $(currentTemp).text("Temperature: " + response.data[0].temp);
         $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(currentHumidity).text("Humidity: " + response.data[0].rh);
