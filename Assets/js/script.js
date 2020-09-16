@@ -3,15 +3,18 @@ $('document').ready(function(){
 // Variables Defined
 
 // Reference to the DOM Elements
+// Search Bar Variables
 var searchButton = $("#search-button");
 var userInputField = $("#user-search-input");
 
+// Current Weather Display Variables
 var displayCurrentCity = $("#display-city");
 var currentTemp = $("#display-temp");
 var currentHumidity = $("#display-humidity");
 var currentWindSpeed = $("#display-wind-speed");
 var currentUvIndex = $("#display-uv-index");
 
+// City Buttons Variables
 var dallasButton = $("#dallas");
 var chicagoButton = $("#chicago");
 var newyorkButton = $("#new-york");
@@ -20,6 +23,14 @@ var sanfranciscoButton = $("#san-francisco");
 var seattleButton = $("#seattle");
 var atlantaButton = $("#atlanta");
 
+// 5 Day Forecast Container Variables
+var forecastDayOne = $("#day-one-forecast");
+var forecastDayTwo = $("#day-two-forecast");
+var forecastDayThree = $("#day-three-forecast");
+var forecastDayFour = $("#day-four-forecast");
+var forecastDayFive = $("#day-five-forecast");
+
+// Weatherbit API Key
 var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
 
