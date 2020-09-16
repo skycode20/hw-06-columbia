@@ -24,14 +24,31 @@ var seattleButton = $("#seattle");
 var atlantaButton = $("#atlanta");
 
 // 5 Day Forecast Container Variables
+// Day One
 var forecastDayOneDate = $("#day-one-date");
 var forecastDayOneTemp = $("#day-one-temp");
 var forecastDayOneHumidity = $("#day-one-humidity");
 
-var forecastDayTwo = $("#day-two-forecast");
-var forecastDayThree = $("#day-three-forecast");
-var forecastDayFour = $("#day-four-forecast");
-var forecastDayFive = $("#day-five-forecast");
+// Day Two
+var forecastDayTwoDate = $("#day-two-date");
+var forecastDayTwoTemp = $("#day-two-temp");
+var forecastDayTwoHumidity = $("#day-two-humidity");
+
+// Day Three
+var forecastDayThreeDate = $("#day-three-date");
+var forecastDayThreeTemp = $("#day-three-temp");
+var forecastDayThreeHumidity = $("#day-three-humidity");
+
+// Day Four
+var forecastDayFourDate = $("#day-four-date");
+var forecastDayFourTemp = $("#day-four-temp");
+var forecastDayFoourHumidity = $("#day-four-humidity");
+
+// Day Five
+var forecastDayFiveDate = $("#day-five-date");
+var forecastDayFiveTemp = $("#day-five-temp");
+var forecastDayFiveHumidity = $("#day-five-humidity");
+
 
 // Weatherbit API Key
 var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
