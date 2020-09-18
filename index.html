@@ -44,7 +44,7 @@
 
         <!-- City Search Bar -->
         <aside id ="search-city" class="col-lg-3">
-            <p>Search By City:</p>
+            <p id="title-search">Search By City:</p>
 
                 <form class="input-group mb-3">
                     
@@ -61,7 +61,7 @@
         <!-- Current City Forecast Container -->
         <div class="col-lg-9">
 
-            <div id ="current-city-weather" class="container">
+            <div id ="current-city-weather" class="container weather-info">
 
                 <!-- Display Current City Name -->
                 <div id="display-city"></div>
@@ -138,7 +138,7 @@
                             <!-- Day One Forecast -->
                             <div class="col-sm-6">
                                 <div class="card">
-                                    <div id="day-one-forecast" class="card-body">
+                                    <div id="day-one-forecast" class="card-body forecast">
 
                                         <div id = "day-one-date" class="card-title"></div>
                                         <div id = "day-one-temp"class="card-text"></div>
@@ -151,7 +151,7 @@
                             <!-- Day Two Forecast -->
                             <div class="col-sm-6">
                                 <div class="card">
-                                    <div id = "day-two-forecast" class="card-body">
+                                    <div id = "day-two-forecast" class="card-body forecast">
 
                                         <div id = "day-two-date" class="card-title"></div>
                                         <div id = "day-two-temp"class="card-text"></div>
@@ -164,7 +164,7 @@
                             <!-- Day Three Forecast -->
                             <div class="col-sm-6">
                                 <div class="card">
-                                    <div id = "day-three-forecast" class="card-body">
+                                    <div id = "day-three-forecast" class="card-body forecast">
 
                                         <div id = "day-three-date" class="card-title"></div>
                                         <div id = "day-three-temp"class="card-text"></div>
@@ -177,7 +177,7 @@
                             <!-- Day Four Forecast -->
                             <div class="col-sm-6">
                                 <div class="card">
-                                    <div id = "day-four-forecast" class="card-body">
+                                    <div id = "day-four-forecast" class="card body forecast">
 
                                         <div id = "day-four-date" class="card-title"></div>
                                         <div id = "day-four-temp"class="card-text"></div>
@@ -190,7 +190,7 @@
                             <!-- Day Five Forecast -->
                             <div class="col-sm-6">
                                 <div class="card">
-                                    <div id = "day-five-forecast" class="card-body">
+                                    <div id = "day-five-forecast" class="card body forecast">
 
                                         <div id = "day-five-date" class="card-title"></div>
                                         <div id = "day-five-temp"class="card-text"></div>
@@ -216,7 +216,7 @@
     <div class="row">
         <div class="col-lg-12">
             <!-- The content in this div gets wrapped in a card -->
-            <div class="card">
+            <div class="card weather-info">
             <div class="card-body">
                 <div class="text-center">
                 A Rencher Enterprises Application! Copyright 2020

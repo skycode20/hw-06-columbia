@@ -26,13 +26,27 @@
 
 .weather-info {
     text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    color: yellow;
+    text-shadow: cadetblue 10px 15px 15px;
+    background-color: rgb(34, 34, 34);
     
 }
 
-/* #five-day-forecast {
+#five-day-forecast {
+    font-family: 'Roboto Mono', monospace;
+    color: yellow;
+    text-shadow: cadetblue 10px 15px 15px;
+    background-color: rgb(34, 34, 34);
     
-} */
+}
 
+.forecast {
+    font-family: 'Roboto Mono', monospace;
+    color: yellow;
+    text-shadow: cadetblue 10px 15px 15px;
+    background-color: rgb(34, 34, 34);
+}
 /* #first-day {  } */
 
 /* #second-day {  } */
@@ -59,3 +73,9 @@
     text-shadow: cadetblue 10px 15px 15px;
 }
 
+#title-search {
+    font-family: 'Roboto Mono', monospace;
+    color: yellow;
+    text-shadow: cadetblue 10px 15px 15px;
+    background-color: rgb(34, 34, 34);
+}
