@@ -4,6 +4,8 @@
 
 #site-title {
     text-align: center;
+    background-color: rgb(34, 34, 34);
+    /* background-image: image-set("https://th.bing.com/th/id/OIP.mLvL8Qp7lZhP6MSLgrhQ4gHaEK?w=295&h=180&c=7&o=5&dpr=2.5&pid=1.7") */
 }
 
 /* #list-cities {
@@ -61,4 +63,7 @@
 #weather-tron-header {
     font-family: 'Share Tech Mono', monospace;
     font-weight: 900;
+    color: yellow;
+    text-shadow: cadetblue 10px 15px 15px;
 }
+

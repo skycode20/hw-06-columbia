@@ -53,23 +53,7 @@ var forecastDayFiveHumidity = $("#day-five-humidity");
 // Weatherbit API Key
 var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
-
-// ======================================================================
-
-
-
-
 var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
-
-  
-
-
-  
-
-    
-        
-    
-
 
 // // ======================================================================
 
@@ -162,16 +146,16 @@ var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
 
 
 
-      // This function handles events where one button is clicked
-      $(searchButton).on("click", function(event) {
+    // This function handles events where one button is clicked
+    $(searchButton).on("click", function(event) {
         event.preventDefault();
 
  
 
         // This line grabs the input from the textbox
-         var userSearchCity = $("#user-search-input").val();
+        var userSearchCity = $("#user-search-input").val();
 
-         var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ userSearchCity + apiKey;
+        var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ userSearchCity + apiKey;
         // userSearchCity.text(JSON.stringify()).push();
         
         console.log(`city searched: ${userSearchCity}`)
@@ -187,7 +171,7 @@ var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
         })
         .then((value) => {
 
-            // console.log(value);
+            console.log(value);
 
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
