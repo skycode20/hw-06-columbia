@@ -50,3 +50,15 @@
 /* #fourth-day {  } */
 
 /* #fifth-day {  } */
+
+.city {
+    background-color: aquamarine;
+    font-family: 'Roboto Mono', monospace;
+    /* border-width: 10pt; */
+    /* border: black; */
+}
+
+#weather-tron-header {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 900;
+}

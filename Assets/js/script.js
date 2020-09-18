@@ -42,7 +42,7 @@ var forecastDayThreeHumidity = $("#day-three-humidity");
 // Day Four
 var forecastDayFourDate = $("#day-four-date");
 var forecastDayFourTemp = $("#day-four-temp");
-var forecastDayFoourHumidity = $("#day-four-humidity");
+var forecastDayFourHumidity = $("#day-four-humidity");
 
 // Day Five
 var forecastDayFiveDate = $("#day-five-date");
@@ -54,52 +54,29 @@ var forecastDayFiveHumidity = $("#day-five-humidity");
 var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
 
-// // Weather API - 5 Day Forecast
-// var fiveDayCity = "New York, NY";
-// var fiveDayURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=" + fiveDayCity + apiKey;
-
-// $.ajax(fiveDayURL).done(function (response) {
-// 	console.log(response);
-// });
-
 // ======================================================================
 
-// User Searched City 
 
-// var userSearchCity = $("#movie-input").val().trim();
-// var userSearchCity = $(userInputField).val().trim();
-// var citiesSearched = [""];
-// var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ citiesSearched + apiKey;
 
-//       // This function handles events where one button is clicked
-//     $(searchButton).on("click", function(event) {
-//         event.preventDefault();
 
-//         // This line grabs the input from the textbox
-//         // var userSearchCity = $(userInputField).val().trim();
-//         // userSearchCity.text(JSON.stringify()).push();
-        
-        
-//         citiesSearched.push(userSearchCity);
-//         console.log(citiesSearched);
+var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
+
+  
+
+
+  
 
     
-//         });
-//         console.log(searchButton);
+        
+    
 
-// $.ajax({
-//       url: userURL,
-//       method: "GET"
-//     })
-//     .then(function(response) {
-//         // console.log(apiURL);
-//         console.log(response);
-//     });
+
 // // ======================================================================
+
     // Current Weather Info Function
     function showCurrentWeatherInfo(response) {
                 
-        console.log(response);
+       // console.log(response);
 
         // transfer to the html
         $(displayCurrentCity).html("<h1>" + response.city_name + " (" + response.data[0].datetime + ") " );
@@ -128,7 +105,7 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     // Display Forecast Day 2
     function displayForecastDay2(response) {
                 
-        console.log(response);
+      //  console.log(response);
 
         // transfer to the html
         $(forecastDayTwoDate).html("<h3>" +  " (" + response.data[2].datetime + ")</h3>" );
@@ -142,7 +119,7 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     // Display Forecast Day 3
     function displayForecastDay3(response) {
                 
-        console.log(response);
+      //  console.log(response);
 
         // transfer to the html
         $(forecastDayThreeDate).html("<h3>" +  " (" + response.data[3].datetime + ")</h3>" );
@@ -156,8 +133,8 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     // Display Forecast Day 4
     function displayForecastDay4(response) {
                 
-        console.log(response);
-
+     //   console.log(response);
+//
         // transfer to the html
         $(forecastDayFourDate).html("<h3>" +  " (" + response.data[4].datetime + ")</h3>" );
         $(forecastDayFourTemp).text("Temperature: " + response.data[4].temp);
@@ -170,7 +147,7 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
     // Display Forecast Day 5
     function displayForecastDay5(response) {
                 
-        console.log(response);
+      //  console.log(response);
 
         // transfer to the html
         $(forecastDayFiveDate).html("<h3>" +  " (" + response.data[5].datetime + ")</h3>" );
@@ -180,6 +157,50 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
         // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
+
+// ======================================================================
+
+
+
+      // This function handles events where one button is clicked
+      $(searchButton).on("click", function(event) {
+        event.preventDefault();
+
+ 
+
+        // This line grabs the input from the textbox
+         var userSearchCity = $("#user-search-input").val();
+
+         var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ userSearchCity + apiKey;
+        // userSearchCity.text(JSON.stringify()).push();
+        
+        console.log(`city searched: ${userSearchCity}`)
+        citiesSearched.push(userSearchCity);
+        console.log(citiesSearched);
+
+        localStorage.setItem("allCities", JSON.stringify(citiesSearched));
+
+
+    $.ajax({
+        url: userURL,
+        method: "GET"
+        })
+        .then((value) => {
+
+            console.log(value);
+
+            showCurrentWeatherInfo(value);
+            displayForecastDay1(value);
+            displayForecastDay2(value);
+            displayForecastDay3(value);
+            displayForecastDay4(value);
+            displayForecastDay5(value);
+            console.log(value);
+            // expected output: "Success!"
+          });
+            
+        });
+
 
 // ======================================================================
 
@@ -321,7 +342,8 @@ var nycURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             url: nycURL,
             method: "GET"
         })
-        .then(displayForecastDay5);nyc
+        .then(displayForecastDay5);
+
         });
 
     console.log(newyorkButton);
