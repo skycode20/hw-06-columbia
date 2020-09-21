@@ -55,6 +55,8 @@ var apiKey = "&key=90e9e44deac84fb4a9f46233e3d5e501";
 
 var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
 
+// var interval = setInterval(uvIndexColorizer, 1000);
+
 // // ======================================================================
 
     // Current Weather Info Function
@@ -75,70 +77,55 @@ var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
     // Display Forecast Day 1
     function displayForecastDay1(response) {
                 
-        // console.log(response);
 
         // transfer to the html
         $(forecastDayOneDate).html("<h3>" +  " (" + response.data[1].datetime + ")</h3>" );
         $(forecastDayOneTemp).text("Temperature: " + response.data[1].temp);
-        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayOneHumidity).text("Humidity: " + response.data[1].rh);
-        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
     // Display Forecast Day 2
     function displayForecastDay2(response) {
                 
-      //  console.log(response);
 
         // transfer to the html
         $(forecastDayTwoDate).html("<h3>" +  " (" + response.data[2].datetime + ")</h3>" );
         $(forecastDayTwoTemp).text("Temperature: " + response.data[2].temp);
-        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayTwoHumidity).text("Humidity: " + response.data[2].rh);
-        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
     // Display Forecast Day 3
     function displayForecastDay3(response) {
                 
-      //  console.log(response);
 
         // transfer to the html
         $(forecastDayThreeDate).html("<h3>" +  " (" + response.data[3].datetime + ")</h3>" );
         $(forecastDayThreeTemp).text("Temperature: " + response.data[3].temp);
-        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayThreeHumidity).text("Humidity: " + response.data[3].rh);
-        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
     // Display Forecast Day 4
     function displayForecastDay4(response) {
                 
-     //   console.log(response);
-//
+
         // transfer to the html
         $(forecastDayFourDate).html("<h3>" +  " (" + response.data[4].datetime + ")</h3>" );
         $(forecastDayFourTemp).text("Temperature: " + response.data[4].temp);
-        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayFourHumidity).text("Humidity: " + response.data[4].rh);
-        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
     // Display Forecast Day 5
     function displayForecastDay5(response) {
                 
-      //  console.log(response);
 
         // transfer to the html
         $(forecastDayFiveDate).html("<h3>" +  " (" + response.data[5].datetime + ")</h3>" );
         $(forecastDayFiveTemp).text("Temperature: " + response.data[5].temp);
-        // $(currentWindSpeed).text("Wind Speed: " + response.data[0].wind_spd);
         $(forecastDayFiveHumidity).text("Humidity: " + response.data[5].rh);
-        // $(currentUvIndex).text("UV Index: " + response.data[0].uv);
         
     };
 
@@ -155,8 +142,7 @@ var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
         // This line grabs the input from the textbox
         var userSearchCity = $("#user-search-input").val();
 
-        var userURL = "https://api.weatherbit.io/v2.0/current?units=I&city="+ userSearchCity + apiKey;
-        // userSearchCity.text(JSON.stringify()).push();
+        var userURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city="+ userSearchCity + apiKey;
         
         console.log(`city searched: ${userSearchCity}`)
         citiesSearched.push(userSearchCity);
@@ -180,7 +166,9 @@ var citiesSearched = JSON.parse(localStorage.getItem("allCities")) || [];
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
-            // expected output: "Success!"
+
+            uvIndexColorizer();
+
           });
             
         });
@@ -201,8 +189,6 @@ var dalURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -212,11 +198,11 @@ var dalURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             console.log(value);
             
             uvIndexColorizer();
+            
             });
         });
     
 
-    // console.log(dallasButton);
 // ======================================================================
 
 // Chicago Weather Request 
@@ -232,8 +218,6 @@ var chiURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -241,11 +225,12 @@ var chiURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
 
-    // console.log(chicagoButton);
 
 // ======================================================================
 
@@ -262,8 +247,6 @@ var nycURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -271,11 +254,12 @@ var nycURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
 
-    // console.log(newyorkButton);
 // ======================================================================
 
 // Miami Weather Request 
@@ -291,8 +275,6 @@ var miaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -300,11 +282,11 @@ var miaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
-
-    // console.log(miamiButton);
 
 // ======================================================================
 
@@ -321,8 +303,6 @@ var seaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -330,11 +310,11 @@ var seaURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
-
-    // console.log(seattleButton);
 
 // ======================================================================
 
@@ -351,8 +331,6 @@ var atlURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -360,11 +338,11 @@ var atlURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
-
-    // console.log(atlantaButton);
 
 // ======================================================================
 
@@ -381,8 +359,6 @@ $(sanfranciscoButton).on("click", function(event) {
         })
         .then((value) => {
 
-            // console.log(value);
-
             showCurrentWeatherInfo(value);
             displayForecastDay1(value);
             displayForecastDay2(value);
@@ -390,11 +366,11 @@ $(sanfranciscoButton).on("click", function(event) {
             displayForecastDay4(value);
             displayForecastDay5(value);
             console.log(value);
+
+            uvIndexColorizer();
             
             });
         });
-
-    // console.log(sanfranciscoButton);
 
 // =======================================================================
 var uvIndexNumber = $(currentUvIndex).text("UV Index: " + response.data[0].uv);
@@ -403,11 +379,11 @@ function uvIndexColorizer() {
     $(currentUvIndex).each(function() {
     var ultraVioletDisplay = parseInt($(this).attr("id").split("-")[1]);
 
-    if (ultraVioletDisplay < uvIndexNumber) {
+    if (uvIndexNumber < 2) {
         $(this).addClass("uv-low");
     }
 
-    else if (ultraVioletDisplay === uvIndexNumber) {
+    else if (uvIndexNumber === 3 || 4 || 5) {
         $(this).removeClass("uv-low");
 
         $(this).addClass("uv-moderate");
@@ -426,7 +402,6 @@ function uvIndexColorizer() {
 });
 }
 
-    // uvIndexColorizer();
 
 
 });
