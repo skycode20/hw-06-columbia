@@ -89,3 +89,28 @@
     text-shadow: cadetblue 10px 15px 15px;
     background-color: rgb(34, 34, 34);
 }
+
+.uv-low {
+    background-color: #08972b;
+    color: white;
+}
+
+.uv-moderate {
+    background-color: #fff238;
+    color: black;
+}
+
+.uv-high {
+    background-color: #d66800;
+    color: white;
+}
+
+.uv-very-high {
+    background-color: #f00000;
+    color: white;
+}
+
+.uv-extreme {
+    background-color: #7700ff;
+    color: white;
+}

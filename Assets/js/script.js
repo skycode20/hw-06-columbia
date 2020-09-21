@@ -211,6 +211,7 @@ var dalURL = "https://api.weatherbit.io/v2.0/forecast/daily?units=I&days=6&city=
             displayForecastDay5(value);
             console.log(value);
             
+            uvIndexColorizer();
             });
         });
     
@@ -396,7 +397,36 @@ $(sanfranciscoButton).on("click", function(event) {
     // console.log(sanfranciscoButton);
 
 // =======================================================================
+var uvIndexNumber = $(currentUvIndex).text("UV Index: " + response.data[0].uv);
 
+function uvIndexColorizer() {
+    $(currentUvIndex).each(function() {
+    var ultraVioletDisplay = parseInt($(this).attr("id").split("-")[1]);
+
+    if (ultraVioletDisplay < uvIndexNumber) {
+        $(this).addClass("uv-low");
+    }
+
+    else if (ultraVioletDisplay === uvIndexNumber) {
+        $(this).removeClass("uv-low");
+
+        $(this).addClass("uv-moderate");
+    }
+
+    else {
+        $(this).removeClass("uv-low");
+
+        $(this).removeClass("uv-moderate");
+
+        $(this).addClass("uv-very-high");
+    }
+
+    console.log(ultraVioletDisplay);
+    console.log(uvIndexNumber);
+});
+}
+
+    // uvIndexColorizer();
 
 
 });
