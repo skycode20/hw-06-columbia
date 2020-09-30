@@ -67,4 +67,4 @@
 
 <br>
 
-- [Go to the Weather-Tron 2000](https://skycode20.github.io/hw-06-columbia/)
+- [Go to the Weather-Tron 2000](https://skycode20.github.io/weather-forecaster-app/)
